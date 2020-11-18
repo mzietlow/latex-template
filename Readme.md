@@ -2,6 +2,19 @@
 Dieses Markdown-File ist Schmu. Ich werde, irgendwann, versuchen es nach LaTeX
 zu migrieren - und vor allem zu vervollständigen.
 
+Installation:
+1. texlive installieren (am besten im Hintergrund laufen lassen) -> https://www.tug.org/texlive/acquire-netinstall.html -> install-tl-windows.exe
+2. VSCode installieren -> https://code.visualstudio.com/download
+3. Plugins: LaTeX Workshop
+3.1 Optionale Plugins: LaTeX Utilities, LTeX, SpellChecker
+
+Nutzung:
+1. git clone https://github.com/mzietlow/resource-mania-doc
+2. VSCode -> File -> Open Folder -> <path> -> öffnen
+3. main.tex auswählen
+4. strg + alt + x für das LaTeX Menü
+5. Build LaTeX project
+
 So, zum LaTeX Einstieg erstmal alles was man so grob wissen sollte:
 Der Einstiegspunkt für LaTeX ist main.tex
 main.tex ist in zwei Abschnitte gegliedert, die Präambel und das Dokument.
