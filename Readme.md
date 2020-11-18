@@ -2,6 +2,47 @@
 Dieses Markdown-File ist Schmu. Ich werde, irgendwann, versuchen es nach LaTeX
 zu migrieren - und vor allem zu vervollständigen.
 
+So, zum LaTeX Einstieg erstmal alles was man so grob wissen sollte:
+Der Einstiegspunkt für LaTeX ist main.tex
+main.tex ist in zwei Abschnitte gegliedert, die Präambel und das Dokument.
+
+In der Präambel wird das Dokument konfiguriert, der Titel wird festgelegt, die Autoren, das Format. Außerdem werden alle Pakete eingebunden, die genutzt werden sollen.
+
+Die Pakete in unserer Präambel sind zusätzlich nach Wirkungsbereich untergliedert, um die Präambel übersichtlich zu halten. Alle Pakete zum Thema Zitation werden zum Beispiel über \input{preamble/references-and-citation.tex} eingebunden.
+
+Das Dokument selbst beginnt ab \begin{document} ... \end{document}
+Es ist unterteilt in Frontmatter, Mainmatter und Backmatter.
+
+Eine Datei, die ein bisschen heraussticht, ist GlossarMetadaten. Hier werden alle Akronyme und Glossar-Einträge d…
+Jedem Kapitel habe ich ein eigenes .tex-file zugeordnet. Mit strg+Rechtsklick öffnet VSCode die Datei automatisch in einem neuen Tab.
+
+In unserem Dokument ist die höchste Gliederungsebene die section.
+\section{Einleitung}
+Jede weitere Untergliederung beginnt mit einem vorangestellten sub-
+\subsection{Beispiel1}
+\subsubsection{Beispiel2}
+Zum Beginnen einer neuen Subsection einfach
+\subsection{Beispiel3}
+Alle sections/subsections landen im Inhaltsverzeichnis:
+1. Einleitung
+1.1 Beispiel1
+1.1.1 Beispiel2
+1.2 Beispiel 3
+daher habe ich die Untergliederungstiefe auf subsubsection begrenzt.
+Weitere Untergliederung kann über \paragraph{Ein Paragraph} erreicht werden. Die landen nicht im Inhaltsverzeichnis und werden nicht nummeriert.
+
+Absätze macht man in LaTeX eher selten. Falls es wirklich notwendig ist, dann entweder
+über 2x Enter oder
+\par
+Ich würde \par bevorzugen, weil es die Absicht eindeutig macht.
+
+Querverweise sind noch cool:
+\section{Einleitung}\label{sec:Einleitung}
+[...]
+
+[...] siehe \cref{sec:Einleitung}.
+VSCode bietet hier btw automatisch code completion an
+
 
 Typesetting ist eine Sache für sich. Studenten dazu zu zwingen, das Rad stets
 neu zu erfinden, ist eine schlechte Idee. Der folgende Guide richtet sich,
